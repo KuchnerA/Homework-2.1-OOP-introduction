@@ -1,12 +1,14 @@
+import transport.Car;
+
 public class Main {
 
     public static void main(String[] args) {
 
-        Car lada = new Car("Lada", "Granta", 1.7, "жёлтый", 2015, "Россия");
-        Car audi = new Car("Audi", "A8 50 L TDI quattro", 3.0, "чёрный", 2020, " Германия");
-        Car bmw = new Car("BMW", "Z8", 3.0, "чёрный", 2021, "Германия");
-        Car kia = new Car("Kia", "Sportage 4-го поколения", 2.4, "красный", 2018, "Южная Корея");
-        Car hyundai = new Car("Hyundai", "Avante", 1.6, "оранженый", 2016, "Южная Корея");
+        Car lada = new Car("Lada", "Granta", 1.7, "жёлтый", 2015, "Россия", "МКПП", "седан", "м111мм111", 5, true, null);
+        Car audi = new Car("Audi", "A8 50 L TDI quattro", 3.0, "чёрный", 2020, " Германия","АКПП", "купе", "м222мм111", 2, true, new Car.Key(true, true));
+        Car bmw = new Car("BMW", "Z8", 3.0, "чёрный", 2021, "Германия","АКПП", "купе", "м333мм111", 2, true, new Car.Key(true, false));
+        Car kia = new Car("Kia", "Sportage 4-го поколения", 2.4, "красный", 2018, "Южная Корея","АКПП", "кроссовер", "м444мм111", 5, false, new Car.Key(false, true));
+        Car hyundai = new Car("Hyundai", "Avante", 1.6, "оранженый", 2016, "Южная Корея","МКПП", "седан", "м555мм111", 5, false, null);
 
         System.out.println(lada);
         System.out.println(audi);
@@ -14,10 +16,10 @@ public class Main {
         System.out.println(kia);
         System.out.println(hyundai);
 
-        Car hyundai2 = new Car("Hyundai2", "", -2.0, null, -15, null);
-        System.out.println(hyundai2);
+//        Car hyundai2 = new Car("Hyundai2", "", -2.0, null, -15, null);
+//        System.out.println(hyundai2);
 
-//        Car lada = new Car();
+//        transport.Car lada = new transport.Car();
 //        lada.brand = "Lada";
 //        lada.model = "Granta";
 //        lada.engineVolume = 1.7;
@@ -26,7 +28,7 @@ public class Main {
 //        lada.productionCountry = "Россия";
 //        System.out.println(lada);
 //
-//        Car audi = new Car();
+//        transport.Car audi = new transport.Car();
 //        audi.brand = "Audi";
 //        audi.model = "A8 50 L TDI quattro";
 //        audi.engineVolume = 3.0;
@@ -35,7 +37,7 @@ public class Main {
 //        audi.productionCountry = "Германия";
 //        System.out.println(audi);
 //
-//        Car bmw = new Car();
+//        transport.Car bmw = new transport.Car();
 //        bmw.brand = "BMW";
 //        bmw.model = "Z 8";
 //        bmw.engineVolume = 3.0;
@@ -44,7 +46,7 @@ public class Main {
 //        bmw.productionCountry = "Германия";
 //        System.out.println(bmw);
 //
-//        Car kia = new Car();
+//        transport.Car kia = new transport.Car();
 //        kia.brand = "Kia";
 //        kia.model = "Sportage 4-го поколения";
 //        kia.engineVolume = 2.4;
@@ -53,7 +55,7 @@ public class Main {
 //        kia.productionCountry = "Южная Корея";
 //        System.out.println(kia);
 //
-//        Car hyundai = new Car();
+//        transport.Car hyundai = new transport.Car();
 //        hyundai.brand = "Hyundai";
 //        hyundai.model = "Avante";
 //        hyundai.engineVolume = 1.6;
