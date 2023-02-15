@@ -1,20 +1,33 @@
+import transport.Bus;
 import transport.Car;
 
 public class Main {
 
     public static void main(String[] args) {
 
-        Car lada = new Car("Lada", "Granta", 1.7, "жёлтый", 2015, "Россия", "МКПП", "седан", "м111мм111", 5, true, null);
-        Car audi = new Car("Audi", "A8 50 L TDI quattro", 3.0, "чёрный", 2020, " Германия","АКПП", "купе", "м222мм111", 2, true, new Car.Key(true, true));
-        Car bmw = new Car("BMW", "Z8", 3.0, "чёрный", 2021, "Германия","АКПП", "купе", "м333мм111", 2, true, new Car.Key(true, false));
-        Car kia = new Car("Kia", "Sportage 4-го поколения", 2.4, "красный", 2018, "Южная Корея","АКПП", "кроссовер", "м444мм111", 5, false, new Car.Key(false, true));
-        Car hyundai = new Car("Hyundai", "Avante", 1.6, "оранженый", 2016, "Южная Корея","МКПП", "седан", "м555мм111", 5, false, null);
+        Car lada = new Car("Lada", "Granta", 1.7, "жёлтый", 2015, "Россия", 160, "МКПП", "седан", "м111мм111", 5, true, null);
+        Car audi = new Car("Audi", "A8 50 L TDI quattro", 3.0, "чёрный", 2020, " Германия", 230, "АКПП", "купе", "м222мм111", 2, true, new Car.Key(true, true));
+        Car bmw = new Car("BMW", "Z8", 3.0, "чёрный", 2021, "Германия", 280, "АКПП", "купе", "м333мм111", 2, true, new Car.Key(true, false));
+        Car kia = new Car("Kia", "Sportage 4-го поколения", 2.4, "красный", 2018, "Южная Корея", 220, "АКПП", "кроссовер", "м444мм111", 5, false, new Car.Key(false, true));
+        Car hyundai = new Car("Hyundai", "Avante", 1.6, "оранженый", 2016, "Южная Корея", 200, "МКПП", "седан", "м555мм111", 5, false, null);
 
         System.out.println(lada);
         System.out.println(audi);
         System.out.println(bmw);
         System.out.println(kia);
         System.out.println(hyundai);
+
+        for (int i = 1; i <= 3; i++) {
+            Bus bus = new Bus(
+                    "Bus brand №" + i,
+                    "Bus model №" + i,
+                    2015 + i,
+                    "Россия",
+                    "желтый",
+                    110
+            );
+            System.out.println(bus);
+        }
 
 //        Car hyundai2 = new Car("Hyundai2", "", -2.0, null, -15, null);
 //        System.out.println(hyundai2);
